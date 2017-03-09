@@ -1,0 +1,40 @@
+{{#if result_count}}
+  <div class="col-10 results">
+    <div class="col-10">
+      <h5>{{result_count}} results found</h5>
+    </div>
+
+    {{#each listing}}
+
+      <section class="col-10" tabindex="{{counter @index}}">
+        <div class="image col-10 col-m-5 col-l-4">
+          <img src="{{image_url}}" alt="{{num_bedrooms}} bedroom {{property_type}} for sale" title="{{num_bedrooms}} bedroom {{property_type}} for sale">
+        </div>
+        <div class="details col-10 col-m-5 col-l-4">
+          <h1>{{num_bedrooms}} bedroom {{property_type}} for sale</h1>
+          <span class="price">{{currency price}}</span>
+          <p>{{description}}</p>
+        </div>
+        <div class="agent col-10 col-m-10 col-l-2">
+          <div class="agent-wrapper">
+            <img src="{{agent_logo}}" alt="{{agent_name}}" title="{{agent_name}}">
+            <h2>{{agent_name}}</h2>
+            <span class="address">{{agent_address}}, {{agent_postcode}}</span>
+            <div class="phone">T: {{agent_phone}}</div>
+          </div>
+        </div>
+      </section>
+
+    {{/each}}
+
+  </div>
+
+
+{{else}}
+  <div class="col-10 search">
+    <h3>No results found</h3>
+    <h4>Enter another location and search again.</h4>
+    {{> search}}
+  </div>
+{{/if}}
+
