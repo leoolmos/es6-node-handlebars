@@ -1,4 +1,4 @@
-import '../helpers/hbs';
+import '../app/helpers/hbs';
 import hbs from 'hbs';
 
 describe("Testing handlebars helpers", () => {

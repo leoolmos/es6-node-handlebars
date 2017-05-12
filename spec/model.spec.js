@@ -1,4 +1,4 @@
-import api from '../model/api';
+import api from '../api/api';
 
 describe("Testing the mock", () => {
   it("Mock should have result_count = 5", () => {

@@ -1,5 +1,5 @@
 import express from 'express';
-import api from '../model/api';
+import api from '../api/api';
 const router = express.Router()
 
 router.get('/:postcode', (req, res, next) => {

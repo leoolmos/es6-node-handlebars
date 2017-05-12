@@ -4,14 +4,14 @@ import favicon from 'serve-favicon';
 import logger from 'morgan';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
-import './helpers/hbs';
+import './app/helpers/hbs';
 import searchRouter from './routers/search';
 import resultRouter from './routers/results';
 
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, './app/views'));
 app.set('view engine', 'hbs');
 
 // uncomment after placing your favicon in /public
